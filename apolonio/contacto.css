@@ -1,0 +1,150 @@
+* {font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;}
+    
+  .imagen_texto {display: flex;}
+  .somos {text-align: center;}
+  .definicion {text-align: center;}
+  .flavio {margin-top: 130px;}
+  .img_flavio {max-height: 700px;}
+
+  /* Fondo degradado para el contenido principal */
+.contenido {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%, /* Transparente en la parte superior */
+            rgba(0, 0, 0, 0.8) 100% /* Negro al final del degradado */
+        ),
+        url('fondos/fondo negro.jpg'); /* Imagen de fondo aplicada al contenido */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    color: white; /* Color del texto para que contraste con el fondo */
+}
+.contenedor {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+/* Estilos básicos del menú */
+.menu {
+    background-color: black;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700; /* Cambia a amarillo mostaza al pasar el cursor */
+}
+
+/* Botón del menú en dispositivos móviles */
+.menu-btn {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+}
+
+.contactanos_parrafo {text-align: center;}
+.contactanos {max-width: 70%; display: flex; justify-content: center; margin: 0 auto;}
+.contacto_titulo {text-align: center;}
+
+.hover-background {
+    background-color: #FFD700; /* Color amarillo mostaza */
+}
+
+/*whatsapp*/
+.wh, .tk {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp, .tiktok {padding-top: 35px; margin: 0 auto;}
+.wh {height: 100px; }
+.whatsapp { max-width: 100px; height: auto; }
+.whatsapp_texto { font-size: 18px; color: white; padding-top: 35px; }
+/*fin de whastapp*/
+
+
+/*tiktok*/
+.tk { height: 100px; }
+.tiktok { max-width: 115px; height: auto; }
+.tiktok_texto { font-size: 18px; padding-top: 35px; padding-left: 30px;}
+
+
+/*agradecimienti*/
+.agradecimiento {text-align: center; margin: 0 auto; display: flex;align-items: center; justify-content: center;}
+.agr {max-width: 900px;}
+.agradecimiento_titulo {text-align: center;}
+/*fin de agradecimiento*/
+
+
+.footer {background-image: url(fondos/fondo\ negro\ y\ amarillo.jpg);
+     color: white; /* Texto en blanco para que contraste con el fondo */
+    text-align: center; /* Centra el texto en el pie de página */
+    font-size: 14px;
+    padding: 20px; /* Espaciado interno para que el texto no quede pegado a los bordes */
+    font-size: 14px; /* Tamaño de letra adecuado */
+    position: relative; /* Permite que el footer se posicione correctamente */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+    max-width: 100%;
+    max-height: 100vh;
+    box-sizing: border-box;
+}

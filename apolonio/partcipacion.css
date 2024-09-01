@@ -1,0 +1,164 @@
+* {padding: 0%;}
+
+/* Estilos básicos del menú */
+.menu {
+    background-color: black;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700; /* Cambia a amarillo mostaza al pasar el cursor */
+}
+
+/* Botón del menú en dispositivos móviles */
+.menu-btn {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+}
+
+/* Fondo degradado para el contenido principal */
+.contenido {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%, /* Transparente en la parte superior */
+            rgba(0, 0, 0, 0.8) 100% /* Negro al final del degradado */
+        ),
+        url('fondos/fondo\ negro.jpg'); /* Imagen de fondo aplicada al contenido */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    color: white; /* Color del texto para que contraste con el fondo */
+}
+
+
+/*años*/
+.torneo_estrellas {text-align: center;}
+.instruccion {text-align: center;}
+.años_z {display: flex; justify-content: center; gap: 50px;}
+.años_z a:hover {color: #FFD700;}
+.primero {text-decoration: none; color: white;}
+.segundo {text-decoration: none; color: white;}
+.tercero {text-decoration: none; color: white;}
+
+.años_z h4 {
+    margin: 0; /* Elimina los márgenes por defecto de los elementos <h4> */
+    padding: 0; /* Elimina cualquier padding */
+    font-size: 1.5rem; /* Tamaño de fuente ajustado */
+}
+
+@media (max-width: 768px) {
+    .años_z {
+        gap: 10px; /* Reduce el espacio entre los elementos en pantallas más pequeñas */
+    }
+
+    .años_z h4 {
+        font-size: 1.2rem; /* Ajusta el tamaño de fuente para dispositivos móviles */
+    }
+}
+/*fin de los años*/
+
+
+* {font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;}
+
+
+  /*footer*/
+  .footer {background-image: url(fondos/fondo\ negro\ y\ amarillo.jpg);
+    color: white; /* Texto en blanco para que contraste con el fondo */
+   text-align: center; /* Centra el texto en el pie de página */
+   padding: 20px; /* Espaciado interno para que el texto no quede pegado a los bordes */
+   font-size: 14px; /* Tamaño de letra adecuado */
+   position: relative; /* Permite que el footer se posicione correctamente */
+   bottom: 0;
+   width: 100%;
+   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/*fin del footer*/
+
+/* Imágenes */
+.abel, .dylan, .jl, .jl2, .abel4, .abel3, .dylan4, .dylan3, .jl3, .megan1, .megan2, .megan3 {
+    height: auto;
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+/* Contenedores */
+.abel_div, .dylan_div, .jl_div, .megan_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.megan1, .megan2, .megan3 {
+    max-height: 400px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+/*fin de las imagenes*/
+
+/*tiktok*/
+.tk { height: 115px; margin: 0 auto; justify-content: center; text-align: center;}
+.tiktok { max-width: 115px; height: auto; }
+.tiktok_texto { font-size: 18px; padding-top: 35px; padding-left: 30px;}
+

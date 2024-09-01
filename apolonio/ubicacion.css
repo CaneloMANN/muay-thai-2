@@ -1,0 +1,135 @@
+* {padding: 0%;}
+
+/* Estilos básicos del menú */
+.menu {
+    background-color: black;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700; /* Cambia a amarillo mostaza al pasar el cursor */
+}
+
+/* Botón del menú en dispositivos móviles */
+.menu-btn {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+}
+
+/* Fondo degradado para el contenido principal */
+.contenido {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%, /* Transparente en la parte superior */
+            rgba(0, 0, 0, 0.8) 100% /* Negro al final del degradado */
+        ),
+        url('fondos/fondo\ negro.jpg'); /* Imagen de fondo aplicada al contenido */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    color: white; /* Color del texto para que contraste con el fondo */
+}
+
+
+* {font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;}
+    
+  .imagen_texto {display: flex;}
+  .somos {text-align: center;}
+  .definicion {text-align: center;}
+  .flavio {margin-top: 130px;}
+  .img_flavio {max-height: 700px;}
+
+  /*texto de visitanos*/
+  .visitanos {text-align: center; justify-content: center; max-width: 1000px; margin: 0 auto;}
+  .titulo {text-align: center;}
+  /*fin del texto de visitanos*/
+
+  /*mapa*/
+  .mapa {justify-content: center; margin: 0 auto; text-align: center;}
+  .direccion_texto {text-align: center;}
+  .mapa {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 500px; /* Ajusta esta altura según lo que necesites */
+}
+
+@media (max-width: 768px) {
+    .mapa iframe {
+        height: 300px; /* Ajusta esta altura para pantallas móviles */
+    }
+}
+
+  /*fin de mapa*/
+
+  /*footer*/
+  .footer {background-image: url(fondos/fondo\ negro\ y\ amarillo.jpg);
+    color: white; /* Texto en blanco para que contraste con el fondo */
+   text-align: center; /* Centra el texto en el pie de página */
+   padding: 20px; /* Espaciado interno para que el texto no quede pegado a los bordes */
+   font-size: 14px; /* Tamaño de letra adecuado */
+   position: relative; /* Permite que el footer se posicione correctamente */
+   bottom: 0;
+   width: 100%;
+   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/*fin de footer*/

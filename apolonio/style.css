@@ -1,0 +1,313 @@
+/* Estilos básicos del menú */
+.menu {
+    background-color: black;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #FFD700; /* Cambia a amarillo mostaza al pasar el cursor */
+}
+
+/* Botón del menú en dispositivos móviles */
+.menu-btn {
+    display: none;
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: black;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu.show ul {
+        display: flex;
+    }
+}
+
+/*Imagenes deslizantes*/
+    /* Estilos para las imágenes rotantes */
+    .imagenes_rotantes {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        position: relative;
+        margin-top: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        height: 300px; /* Ajusta la altura del contenedor para todas las pantallas */
+    }
+
+    .contenedor {
+        display: flex;
+        width: 400%; /* Ajusta esto según el número de imágenes */
+        transition: transform 0.5s ease-in-out;
+        height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+    }
+
+    .slide {
+        flex: 1 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%; /* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Flechas de navegación */
+    .flecha {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2rem;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+        transition: background-color 0.3s ease;
+    }
+
+    .flecha:hover {
+        background-color: #FFD700; /* Cambia a amarillo mostaza al pasar el cursor */
+    }
+
+    .flecha-izquierda {
+        left: 30px;
+    }
+
+    .flecha-derecha {
+        right: 30px;
+    }
+
+    /* Media query para ajuste responsive */
+    @media (max-width: 768px) {
+        .imagenes_rotantes {
+            height: 200px; /* Ajusta la altura máxima en dispositivos móviles */
+        }
+
+        .slide img {
+            width: 100%; /* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
+            max-height: 100%;
+        }
+
+        .flecha {
+            font-size: 1.5rem;
+            padding: 5px;
+        }
+
+        .flecha-izquierda {
+            left: 10px;
+        }
+
+        .flecha-derecha {
+            right: 10px;
+        }
+    }
+/*fin de las imagenes deslizantes*/
+
+/*fondo negro y amarillo*/
+.imagenes_rotantes {
+    width: 100%;
+    height: 300px; /* Ajusta según el tamaño deseado */
+    background-image: url('fondos/yellow_grunge_and_halftone_pattern_in_dark_background.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el área del contenedor */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Asegura que el contenido de las imágenes rotantes se posicione correctamente */
+    overflow: hidden; /* Asegura que no haya desbordamiento */
+}
+
+/* Estilos para las imágenes rotantes */
+.contenedor {
+    display: flex;
+    width: 400%; /* Ajusta esto según el número de imágenes */
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+.slide {
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide img {
+    width: 100%; /* Ajusta la imagen para que ocupe el 100% del ancho del contenedor */
+    height: auto;
+    max-height: 100%;
+    object-fit: contain; /* Asegura que la imagen mantenga su proporción y se ajuste al contenedor */
+    display: block;
+    margin: 0 auto;
+}
+/*fin del fondo negro y amarillo*/
+
+/* Fondo degradado para el contenido principal */
+.contenido {
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%, /* Transparente en la parte superior */
+            rgba(0, 0, 0, 0.8) 100% /* Negro al final del degradado */
+        ),
+        url('fondos/fondo negro.jpg'); /* Imagen de fondo aplicada al contenido */
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Ajusta el padding según sea necesario */
+    color: white; /* Color del texto para que contraste con el fondo */
+}
+.contenedor {
+    display: flex;
+    width: 400%;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+* {font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;}
+  
+.imagen_texto {display: flex;}
+.somos {text-align: center;}
+.definicion {text-align: center;}
+.flavio {margin-top: 130px;}
+.img_flavio {max-height: 700px;}
+
+/*pie de pagina*/
+    /* Estilos para el footer */
+.footer {
+    background-color: black; /* Fondo negro para el pie de página */
+    color: white; /* Texto en blanco para que contraste con el fondo */
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 20px; /* Espaciado interno para que el texto no quede pegado a los bordes */
+    font-size: 14px; /* Tamaño de letra adecuado */
+    position: relative; /* Permite que el footer se posicione correctamente */
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil para darle profundidad */
+    max-width: 100%;
+    max-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .footer {
+        padding: 15px;
+        font-size: 12px; /* Reduce el tamaño de letra en pantallas pequeñas */
+    }
+}
+.copy {font-size: 1px;}
+.footer {padding-left: 0%;}
+
+.footer {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+}
+.contenido > * {
+    opacity: 0;
+    transform: translateY(150px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.contenido > *.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sombra {height: 350px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer {background-image: url(fondos/fondo\ negro\ y\ amarillo.jpg);}
+
+
+.flavio {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.imagen_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pie_flavio {
+    margin: 20px auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .imagen_texto {
+        flex-direction: row;
+    }
+    
+    .flavio {
+        max-width: 700px;
+    }
+}
+
+.descripcion {text-align: center; margin: 0 auto; justify-content: center; max-width: 700px;}
+
+.imagen_texto {margin: 0 auto; justify-content: center; text-align: center;}
