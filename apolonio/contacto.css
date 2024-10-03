@@ -11,17 +11,7 @@
 
   /* Fondo degradado para el contenido principal */
 .contenido {
-    background-image: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0) 0%, /* Transparente en la parte superior */
-            rgba(0, 0, 0, 0.8) 100% /* Negro al final del degradado */
-        ),
-        url('fondos/fondo negro.jpg'); /* Imagen de fondo aplicada al contenido */
-    background-size: cover; /* Asegura que la imagen de fondo cubra todo el contenedor */
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px; /* Ajusta el padding según sea necesario */
-    color: white; /* Color del texto para que contraste con el fondo */
+ 
 }
 .contenedor {
     display: flex;
@@ -117,7 +107,7 @@
 .whatsapp, .tiktok {padding-top: 35px; margin: 0 auto;}
 .wh {height: 100px; }
 .whatsapp { max-width: 100px; height: auto; }
-.whatsapp_texto { font-size: 18px; color: white; padding-top: 35px; }
+.whatsapp_texto { font-size: 18px; color: rgb(0, 0, 0); padding-top: 35px; }
 /*fin de whastapp*/
 
 
@@ -147,4 +137,28 @@
     max-width: 100%;
     max-height: 100vh;
     box-sizing: border-box;
+}
+.contenido {
+    background-image: url(fondos/mostaza.png);
+    background-repeat: no-repeat; /* No se repite */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    padding-top: 10px;
+    min-height: 100vh; /* Cubre toda la pantalla en pantallas grandes */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenido {
+        background-size: 100% 100%; /* Asegura que la imagen se ajuste al ancho sin mostrar los bordes */
+        background-position: center center; /* Centra la imagen tanto vertical como horizontalmente */
+        background-repeat: no-repeat; /* No se repite */
+        min-height: 100vh; /* Cubre toda la pantalla en móviles */
+    }
+}
+
+
+.muay_thay {
+    background-color: var(--negro);
+    color: var(--blanco);
 }

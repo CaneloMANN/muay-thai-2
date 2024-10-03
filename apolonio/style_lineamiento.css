@@ -167,3 +167,23 @@
     max-width: 100%;
     box-sizing: border-box;
 }
+
+:root{
+    --amarillo: rgb(255, 174, 0);
+    --negro: #000000;
+    --blanco: #fff
+}
+
+.contenido{
+    background-image: url(fondos/rayos.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 10px;
+}
+
+.muay_thay {
+    background-color: var(--negro);
+    color: var(--blanco);
+}
+
+*{color: #000000;}

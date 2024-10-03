@@ -162,3 +162,36 @@
 .tiktok { max-width: 115px; height: auto; }
 .tiktok_texto { font-size: 18px; padding-top: 35px; padding-left: 30px;}
 
+:root{
+    --amarillo: rgb(255, 174, 0);
+    --negro: #000000;
+    --blanco: #fff
+}
+
+.contenido {
+    background-image: url(fondos/rayos.png);
+    background-repeat: repeat-y; /* Repetir la imagen verticalmente */
+    background-size: contain; /* Mantener la imagen completa visible */
+    background-position: center top; /* Centrar y anclar la imagen en la parte superior */
+    padding-top: 10px;
+    min-height: 100vh; /* Asegura que el fondo cubra al menos toda la pantalla */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .contenido {
+        background-size: contain; /* Mantener la imagen completa visible en móviles */
+        background-repeat: repeat-y; /* Repetir la imagen verticalmente en móviles */
+        background-position: center top; /* Mantener la imagen centrada y en la parte superior */
+        min-height: 100vh; /* Asegura que cubra toda la pantalla en móviles */
+    }
+}
+
+*{color: #000000;}
+
+img{border: #000000;}
+
+img {
+    border: 2px solid black; /* Añade un borde negro de 2px */
+    border-radius: 10px; /* Hace los bordes redondeados */
+}
